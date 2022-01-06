@@ -44,3 +44,27 @@ char  ft_substr(char *s, int start, int len)
   dest[j] = '\0';
   return (dest);
 }
+char ft_strjoin(char *str1, char *str2)
+{
+  int i;
+  int j;
+  char  *dest;
+  
+  i = 0;
+  j = 0;
+  if (s1! || s2!)
+    return (NULL);
+  while (s1[i])
+  {
+    dest[j] = s1[i];
+    i++;
+  }
+  while (s2[i])
+  {
+    dest[i + j] = s2[j];
+    j++;
+  }
+  free (s1);
+  dest[i + j] = '\0';
+  return (dest); 
+}
