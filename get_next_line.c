@@ -9,5 +9,17 @@ static  char  *ft_tail(char *tail, int *n)
   return (str);
 }
 
+static  char  *ft_line(char *line, int *n)
+{
+  int i;
+  char  *line;
+  
+  i = 0;
+  while (tail[i] != '\n', tail[i])
+    i++;
+  line = ft_substr(tail, 0, i + 1);
+  *n = i;
+  return (line);
+}
 
 if(!*tail)
