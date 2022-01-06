@@ -22,4 +22,22 @@ static  char  *ft_line(char *line, int *n)
   return (line);
 }
 
+static  char  *ft_read(int fd, char *tail)
+{
+   int  count_read;
+   char buf[BUFFER_SIZE + 1];
+  
+   count_read = 1;
+   while (count_read > 0 && !ft_strchr(tail, '\n'))
+   {
+     count_read = read(fd, buf, BUFFER_SIZE);
+      if(count_read < 0)
+        return (NULL);
+     buf(count_read) = '\0';
+     if (!tail)
+       tail = ft_substr(buf, 0, count_read);
+     else
+       tail = ft_strjoin(tail, buf);
+   }
+}
 if(!*tail)
