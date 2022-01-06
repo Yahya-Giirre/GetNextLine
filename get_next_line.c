@@ -60,3 +60,4 @@ char  *get_next_line(int fd)
   line = ft_line(tail, &n);
   tail = ft_tail(tail, &n)
   return (line);
+}
