@@ -35,7 +35,7 @@ static  char  *ft_read(int fd, char *tail)
         return (NULL);
      buffer(count_read) = '\0';
      if (!tail)
-       tail = ft_substr(buf, 0, count_read);
+       tail = ft_substr(buffer, 0, count_read);
      else
        tail = ft_strjoin(tail, buffer);
    }
