@@ -41,4 +41,22 @@ static  char  *ft_read(int fd, char *tail)
    }
   return (tail);
 }
-if(!*tail)
+
+char  *get_next_line(int fd)
+{
+  static  char  *tail;
+  char  *line;
+  int n;
+  if  (fd < 0 || BUFFER_SIZE < 1 || read(fd, 0, 0) < 0))
+    return (NULL);
+  tail = ft_read(fd, tail);
+  if(!*tail)
+  {
+    free(tail);
+    tail = (NULL);
+    return (NULL);
+  }
+  n = 0;
+  line = ft_line(tail, &n);
+  tail = ft_tail(tail, &n)
+  return (line);
