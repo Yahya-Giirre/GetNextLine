@@ -33,11 +33,11 @@ static  char  *ft_read(int fd, char *tail)
      count_read = read(fd, buffer, BUFFER_SIZE);
       if(count_read < 0)
         return (NULL);
-     buf(count_read) = '\0';
+     buffer(count_read) = '\0';
      if (!tail)
        tail = ft_substr(buf, 0, count_read);
      else
-       tail = ft_strjoin(tail, buf);
+       tail = ft_strjoin(tail, buffer);
    }
 }
 if(!*tail)
