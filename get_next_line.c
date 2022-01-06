@@ -39,5 +39,6 @@ static  char  *ft_read(int fd, char *tail)
      else
        tail = ft_strjoin(tail, buffer);
    }
+  return (tail);
 }
 if(!*tail)
