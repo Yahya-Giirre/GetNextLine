@@ -8,3 +8,6 @@ static  char  *ft_tail(char *tail, int *n)
   free (tail);
   return (str);
 }
+
+
+if(!*tail)
