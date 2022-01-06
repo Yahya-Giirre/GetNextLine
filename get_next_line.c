@@ -25,12 +25,12 @@ static  char  *ft_line(char *line, int *n)
 static  char  *ft_read(int fd, char *tail)
 {
    int  count_read;
-   char buf[BUFFER_SIZE + 1];
+   char buffer[BUFFER_SIZE + 1];
   
    count_read = 1;
    while (count_read > 0 && !ft_strchr(tail, '\n'))
    {
-     count_read = read(fd, buf, BUFFER_SIZE);
+     count_read = read(fd, buffer, BUFFER_SIZE);
       if(count_read < 0)
         return (NULL);
      buf(count_read) = '\0';
